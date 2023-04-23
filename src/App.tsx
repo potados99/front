@@ -57,6 +57,14 @@ function App() {
         </a>
         <a
           className="App-link"
+          href="https://blog.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          blog.potados.com
+        </a>
+        <a
+          className="App-link"
           href="https://tools.potados.com"
           target="_blank"
           rel="noopener noreferrer"
