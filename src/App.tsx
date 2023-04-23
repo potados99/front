@@ -7,16 +7,93 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          안녕하세요~!
-        </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.potados.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          www.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://duty.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          duty.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://home.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          home.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://cloud.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          cloud.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://collect.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          collect.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://chat.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          chat.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://tools.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          tools.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://sugang.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          sugang.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://shell.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          shell.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://desktop.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          desktop.potados.com
+        </a>
+        <a
+          className="App-link"
+          href="https://browser.potados.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          browser.potados.com
         </a>
       </header>
     </div>
