@@ -16,7 +16,8 @@ function App() {
         'sugang.potados.com',
         'shell.potados.com',
         'desktop.potados.com',
-        'browser.potados.com'
+        'browser.potados.com',
+        "drop.potados.com"
     ];
 
     return (
