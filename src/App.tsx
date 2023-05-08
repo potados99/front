@@ -17,7 +17,7 @@ function App() {
         'shell.potados.com',
         'desktop.potados.com',
         'browser.potados.com',
-        "drop.potados.com"
+        "flick.potados.com"
     ];
 
     return (
