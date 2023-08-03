@@ -17,9 +17,9 @@ export default function Host({ title, hostname, protocols, description, links }:
     <Card.Body>
       <Card.Title>{title}</Card.Title>
       <Card.Subtitle>{hostname}</Card.Subtitle>
-      {protocols.map((p) => (<Badge style={{marginRight: '4px', marginBottom: '8px'}}>{p}</Badge>))}
+      {protocols.map((p) => (<Badge style={{marginRight: '4px', marginBottom: '8px'}} key={p}>{p}</Badge>))}
       <Card.Text>{description}</Card.Text>
-      {links.map((l) => (<Card.Link href={l.url}>{l.label}</Card.Link>))}
+      {links.map((l) => (<Card.Link href={l.url} key={l.url}>{l.label}</Card.Link>))}
     </Card.Body>
   </Card>;
 }
