@@ -156,7 +156,7 @@ function App() {
 
   return (
     <Container className={"col-12"}>
-      <Row data-masonry='{"percentPosition": true }'>
+      <Row className={"justify-content-center"}>
         {sites.map(s =>
           <Host {...s} key={s.hostname}/>
         )}
