@@ -119,9 +119,9 @@ function App() {
       title: "AWS 메인",
       hostname: "aws.potados.com",
       protocols: ["http", "ssh"],
-      description: "",
+      description: "AWS EC2 instance",
       links: [
-        {label: '바로가기', url: 'https://'}
+        {label: '바로가기', url: 'ssh://potados@aws.potados.com'}
       ]
     },
     {
