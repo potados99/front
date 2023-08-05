@@ -156,7 +156,7 @@ function App() {
 
   return (
     <Container className={"col-12"}>
-      <Row className={"justify-content-center"}>
+      <Row >
         {sites.map(s =>
           <Host {...s} key={s.hostname}/>
         )}
