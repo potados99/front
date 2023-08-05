@@ -18,15 +18,15 @@ export default function Host({ title, hostname, protocols, description, links }:
 
   const summaryBody = (
     <SummaryCardBody selected={selected}>
-      <Card.Title>{title}</Card.Title>
+      <h2 style={{ fontWeight: "bold" }}>{title}</h2>
       <Card.Subtitle>{hostname}</Card.Subtitle>
     </SummaryCardBody>
   );
 
   const detailBody = (
     <DetailCardBody selected={selected}>
-      <Card.Title>{title}</Card.Title>
-      <Card.Subtitle>{hostname}</Card.Subtitle>
+      <Card.Title style={{ fontWeight: "bold" }}>{title}</Card.Title>
+      <Card.Subtitle className={"text-muted mb-2"}>{hostname}</Card.Subtitle>
       {protocols.map((p) => (
         <Badge style={{ marginRight: "4px", marginBottom: "8px" }} key={p}>
           {p}
@@ -43,8 +43,8 @@ export default function Host({ title, hostname, protocols, description, links }:
 
   return (
     <AnimatedCard
-      style={{ height: "20rem" }}
-      className={"col-sm-12 col-md-4 col-lg-3 d-flex flex-column justify-content-center align-items-center"}
+      selected={selected}
+      className={"d-flex flex-column justify-content-center align-items-center"}
       onClick={() => setSelected(!selected)}
     >
       <Container>
@@ -55,23 +55,38 @@ export default function Host({ title, hostname, protocols, description, links }:
   );
 }
 
-const AnimatedCard = styled(Card)``;
+const AnimatedCard = styled(Card)<{ selected: boolean }>`
+  box-shadow: rgba(0, 0, 0, 0.04) 0 2px 10px 0;
+  border-radius: 0.75rem;
+  margin: 4px;
+
+  transition: all 0.5s ease;
+  height: ${({ selected }) => (selected ? "220px" : "8rem")};
+  max-height: 400px;
+`;
 
 const SummaryCardBody = styled(Card.Body)<{ selected: boolean }>`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 40%;
+  left: 0;
+  transform: translate(0, -40%);
+
+  padding-left: 32px;
   transition: all 0.5s ease;
   filter: ${({ selected }) => (selected ? "blur(10px)" : "")};
 `;
 
 const DetailCardBody = styled(Card.Body)<{ selected: boolean }>`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  transition: all 0.5s ease;
+  padding: 8px;
+  transition: all 0.4s ease-out;
   opacity: ${({ selected }) => (selected ? 1 : 0)};
-  transform: ${({ selected }) => (selected ? "none" : "translateY(5%)")};
+  transform: ${({ selected }) => (selected ? "none" : "translateY(50%)")};
+  visibility: ${({ selected }) => (selected ? "visible" : "hidden")};
+  height: ${({ selected }) => (selected ? "auto" : "0")};
 `;
+//display: ${({ selected }) => (selected ? "block" : "none")};
 
+//   visibility: ${({ selected }) => (selected ? "visible" : "hidden")};
 //   opacity: ${({ selected }) => (selected ? 1 : 0)};
