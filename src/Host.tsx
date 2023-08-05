@@ -58,10 +58,10 @@ export default function Host({ title, hostname, protocols, description, links }:
 const AnimatedCard = styled(Card)<{ selected: boolean }>`
   box-shadow: rgba(0, 0, 0, 0.04) 0 2px 10px 0;
   border-radius: 0.75rem;
-  margin: 4px;
+  margin-top: 8px;
 
   transition: all 0.5s ease;
-  height: ${({ selected }) => (selected ? "220px" : "8rem")};
+  height: ${({ selected }) => (selected ? "256px" : "8rem")};
   max-height: 400px;
 `;
 
